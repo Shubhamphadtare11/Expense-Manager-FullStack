@@ -1,30 +1,25 @@
-const express = require('express')
-const cors = require('cors')
-const { db } = require('./db/db')
-const {readdirSync} = require('fs')
-const app = express()
+const express = require('express');
+const cors = require('cors');
+const { db } = require('./db/db');
+const { readdirSync } = require('fs');
+require('dotenv').config();
 
-require('dotenv').config()
+const app = express();
+const PORT = process.env.PORT || 5000;
 
-const PORT  = process.env.PORT
-
-//middleware
-app.use(express.json())
-
+// Middleware
+app.use(express.json());
 app.use(cors({
-    origin: 'https://expense-manager-fullstack.vercel.app/', 
+    origin: 'https://expense-manager-fullstack.vercel.app', // Remove trailing slash
     credentials: true
 }));
 
-//routes
-readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
+// Database connection
+db(); // Assuming db() initializes your database connection
 
+// Dynamically import routes
+readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)));
 
-const server = () =>{
-    db()
-    app.listen(PORT, ()=>{
-        console.log("you are listening to port ", PORT)
-    })
-}
-
-server();
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
