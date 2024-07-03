@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-     "build": "your-build-command"
+     "build": "react-scripts build"
   },
   "author": "",
   "license": "ISC",
