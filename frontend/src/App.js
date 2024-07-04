@@ -48,7 +48,7 @@ function App() {
 }
 
 const AppStyled = styled.div`
-  height: 100vh;
+   height: 100vh;
   background-image: url(${props => props.bg});
   position: relative;
   main{

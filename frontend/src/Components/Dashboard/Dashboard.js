@@ -71,9 +71,9 @@ function Dashboard() {
 
 const DashboardStyled = styled.div`
     
-    // .main-layout{
-    // overflow-y: scroll;
-    // }
+    .main-layout{
+    overflow-y: scroll;
+    }
 
     .stats-con{
         display: grid;
@@ -108,6 +108,7 @@ const DashboardStyled = styled.div`
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    margin-bottom: 8rem;
                     p{
                         color: var(--color-green);
                         opacity: 0.6;

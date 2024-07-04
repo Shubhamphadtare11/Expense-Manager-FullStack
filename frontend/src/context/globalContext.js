@@ -3,6 +3,7 @@ import axios from 'axios';
 
 // Base URL for your backend API
 const BASE_URL = "https://expense-manager-9nth.onrender.com/api/v1/";
+// const BASE_URL = "http://localhost:5000/api/v1/";
 
 // Create the context
 const GlobalContext = React.createContext();

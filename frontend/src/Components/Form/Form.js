@@ -136,6 +136,7 @@ const FormStyled = styled.form`
     }
 
     .submit-btn{
+    margin-bottom: 7rem;
         button{
             box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
             &:hover{

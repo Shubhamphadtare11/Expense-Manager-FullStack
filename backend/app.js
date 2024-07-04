@@ -9,10 +9,15 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
+
+//for local test comment below
 app.use(cors({
     origin: 'https://expense-manager-fullstack.vercel.app', // Remove trailing slash
     credentials: true
 }));
+
+//for local test uncomment below
+// app.use(cors());
 
 // Database connection
 db(); // Assuming db() initializes your database connection

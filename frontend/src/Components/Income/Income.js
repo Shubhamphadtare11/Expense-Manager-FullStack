@@ -13,7 +13,7 @@ function Income() {
     }, [])
     return (
         <IncomeStyled>
-            <InnerLayout>
+            <InnerLayout className='inner-layout'>
                 <h1>Incomes</h1>
                 <h2 className="total-income">Total Income: <span>${totalIncome()}</span></h2>
                 <div className="income-content">
@@ -44,6 +44,10 @@ function Income() {
 }
 
 const IncomeStyled = styled.div`
+ .inner-layout{
+        height: 100vh;
+    overflow-y: scroll;
+    }
     display: flex;
     overflow: auto;
     .total-income{
