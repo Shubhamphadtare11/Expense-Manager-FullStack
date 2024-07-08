@@ -49,7 +49,7 @@ function App() {
 
 const AppStyled = styled.div`
    height: 100vh;
-  background-image: url(${props => props.bg});
+ background-color: black;
   position: relative;
   main{
     flex: 1;
